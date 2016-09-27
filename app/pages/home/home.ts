@@ -20,6 +20,7 @@ export class HomePage {
 
     ionViewLoaded() {
         this.setFilteredItems();
+        // value change的listener
         this.searchControl.valueChanges.debounceTime(700).subscribe(search => {
             this.searching = false;
             this.setFilteredItems();
